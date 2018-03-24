@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   get 'lots/:id', to: 'lots#show'
   get 'lots', to: 'lots#index'
 
+  get 'schools', to: 'schools#index'
   get 'get_lots/:name', to: 'schools#get_lots'
+
 end

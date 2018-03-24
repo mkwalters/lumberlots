@@ -7,4 +7,9 @@ class SchoolsController < ApplicationController
   	render :json => {"lots": lots}
 
   end
+
+  def index
+  	schools = School.all
+  	render :json => {"schools": schools}
+  end
 end

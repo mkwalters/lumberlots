@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180324014631) do
+ActiveRecord::Schema.define(version: 20180324024351) do
 
   create_table "lots", force: :cascade do |t|
-    t.integer "available_spaces"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "total_spaces"
+    t.integer "car_count"
   end
 
 end

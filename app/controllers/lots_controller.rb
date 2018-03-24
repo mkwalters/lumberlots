@@ -4,8 +4,8 @@ class LotsController < ApplicationController
 
   def edit_helper
     params.permit!
-    current_lot = Lot.find(1)
-    current_lot.update({available_spaces: 2})
+    current_lot = Lot.find(params[:id])
+    current_lot.update({car_count: params[:qty]})
   end
 
 end

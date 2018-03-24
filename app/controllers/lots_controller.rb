@@ -1,6 +1,17 @@
 class LotsController < ApplicationController
   def update
   end
+  
+  def index
+    ans = []
+    lots = Lot.all
+
+    lots.each do |lot|
+      ans.push(lot.attributes)
+    end
+
+    render :json => {"lot_array": ans}
+  end
 
   def edit_helper
     params.permit!
